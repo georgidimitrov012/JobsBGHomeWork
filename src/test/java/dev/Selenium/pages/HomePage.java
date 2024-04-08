@@ -14,5 +14,9 @@ public class HomePage extends BasePage {
         return new HeaderComponent(driver);
     }
 
+    public CookiesComponent cookies() {
+        return new CookiesComponent(driver);
+    }
+
 
 }

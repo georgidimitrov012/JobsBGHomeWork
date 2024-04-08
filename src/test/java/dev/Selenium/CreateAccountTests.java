@@ -13,11 +13,14 @@ public class CreateAccountTests extends MainDriver {
     public void negativeTests() {
         homePage = new HomePage(driver);
 
+        homePage.cookies().acceptCookies();
+
         homePage.header().clickRegisterButton();
 
         createAccountModal = new CreateAccountModal(driver);
-        /*JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("document.body.style.zoom = '0.5'");*/
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("document.body.style.zoom = '0.7'");
+
         createAccountModal.clickCreate();
 
         createAccountModal.setFirstName("asdasdas");
